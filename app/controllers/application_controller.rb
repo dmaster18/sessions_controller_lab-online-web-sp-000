@@ -4,8 +4,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def hello
-    session[:username] = params[:username]
-    if session[:username]
+    session[:name] = params[:name]
+    if session[:name]
       render "application/hello"
     else
       redirect_to "/login"
